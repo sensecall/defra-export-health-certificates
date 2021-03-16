@@ -5,7 +5,7 @@ const router = express.Router()
 
 // redirect route to start page
 router.get('/', (req, res, next) => {
-	res.redirect(`/${req.version}/start`)
+	res.redirect(`/${req.version}/govuk`)
 })
 
 // set the service name on all pages in this version
