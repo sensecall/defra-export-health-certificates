@@ -15,6 +15,13 @@ router.all('*', function (req, res, next) {
 	next()
 })
 
+router.post('/certificate-number', (req, res, next) => {
+	res.redirect('certificate-details')
+})
+
+router.post('/certificate-details', (req, res, next) => {
+	res.redirect('exports-application')
+})
 
 
 

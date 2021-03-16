@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{% include './includes/_phase-banner--beta.html' %}
+
+{{ govukBackLink({
+	"text": "Back",
+	"href": "javascript: window.history.go(-1)"
+})}}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form method="post">
+			<h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+				Check catch certificate details
+			</h1>
+
+			<h2 class="govuk-heading-m">
+				Certificate details
+			</h2>
+
+			{{ govukSummaryList({
+				classes: "govuk-!-margin-bottom-8",
+				rows: [
+				{
+					key:
+					{
+						text: "Catch certificate number"
+					},
+					value:
+					{
+						text: "0001122344"
+					}
+				},
+				{
+					key:
+					{
+						text: "Summary item 2"
+					},
+					value:
+					{
+						text: "Content"
+					}
+				},
+				{
+					key:
+					{
+						text: "Summary item 3"
+					},
+					value:
+					{
+						html: "Content"
+					}
+				},
+				{
+					key:
+					{
+						text: "Summary item 4"
+					},
+					value:
+					{
+						html: "Content"
+					}
+				}
+				]
+			}) }}
+
+			<h3 class="govuk-heading-m">
+				Now confirm you want to use this certificate
+			</h3>
+			<p>
+				We'll add the details from this catch certificate to your 8270EHC application when you've confirmed these details are correct.
+			</p>
+
+			{{govukButton({
+				text: "Confirm and continue"
+			})}}
+		</form>
+	</div>
+</div>
+{% endblock %}
