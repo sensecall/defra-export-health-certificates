@@ -15,3 +15,14 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+@import "patterns/_defra-login-nav";
+
+
+
+// task list
+.in-progress{background:#71767e}
+.not-started{background:white;color:#141414;border: solid 1px #cbcbcb }
+.turquoise-tag{background:#28a197;font-size: 0.875rem; }
+.app-task-list__task-name {
+    max-width: 75%;
+}
