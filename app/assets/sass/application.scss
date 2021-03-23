@@ -19,6 +19,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/_defra-pagination";
 @import "components/_defra-filter";
 @import "components/_defra-search";
+@import "components/accessible-autocomplete";
+@import "components/autocomplete__dropdown-arrow";
 
 // task list
 .in-progress{background:#71767e}
