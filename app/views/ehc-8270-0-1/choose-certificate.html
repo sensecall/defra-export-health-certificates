@@ -28,14 +28,9 @@
           </p>
         </div>
         <form method="post">
-          <input type="hidden" name="crumb_csrf_token" value="1MacVT92L-_mFTcSTm_dDF7SJGbIcYJdPkovM-Ne_Wz">
-
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-
-
-
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="certificate-517EHC" name="certificate" type="radio" value="/forms/517EHC">
                   <label class="govuk-label govuk-radios__label" for="certificate-517EHC">
@@ -67,9 +62,11 @@
               </div>
             </fieldset>
           </div>
-          <input class="govuk-button" type="submit" name="saveAndContinue" value="Continue" id="Button-SaveAndContinue" data-qa-id="Button-SaveAndContinue">
+          
+          {{govukButton({
+            text: "Continue"
+          })}}
         </form>
-
       </div>
 </div>
 {% endblock %}
