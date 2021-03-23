@@ -16,8 +16,9 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "patterns/_defra-login-nav";
-
-
+@import "patterns/_defra-pagination";
+@import "components/_defra-filter";
+@import "components/_defra-search";
 
 // task list
 .in-progress{background:#71767e}
