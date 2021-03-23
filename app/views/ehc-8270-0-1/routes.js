@@ -5,7 +5,7 @@ const router = express.Router()
 
 // redirect route to start page
 router.get('/', (req, res, next) => {
-	res.redirect(`/${req.version}/govuk`)
+	res.redirect(`/${req.version}/your-applications`)
 })
 
 // set the service name on all pages in this version
@@ -26,6 +26,19 @@ router.post('/certificate-number', (req, res, next) => {
 router.post('/certificate-details', (req, res, next) => {
 	res.redirect('exports-application--partial')
 })
+
+router.post('/your-applications', (req, res, next) => {
+	res.redirect('choose-certificate')
+})
+
+router.post('/choose-certificate', (req, res, next) => {
+	res.redirect('block')
+})
+
+router.post('/block', (req, res, next) => {
+	res.redirect('task-list')
+})
+
 
 
 
