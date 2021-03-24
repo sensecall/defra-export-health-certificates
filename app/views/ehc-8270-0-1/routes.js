@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const countries = require('i18n-iso-countries');
 
 // Add your routes here - above the module.exports line
 
@@ -13,6 +14,16 @@ router.all('*', function (req, res, next) {
 	res.locals['serviceName'] = 'Export health certificates'
 
 	next()
+})
+
+
+
+
+
+router.get('/task-list', (req, res, next) => {
+	delete req.session.data['filter']
+	
+	res.render(`${req.version}/task-list`)
 })
 
 router.post('/certificate-number', (req, res, next) => {
@@ -38,7 +49,6 @@ router.post('/choose-certificate', (req, res, next) => {
 router.post('/block', (req, res, next) => {
 	res.redirect('task-list')
 })
-
 
 
 
