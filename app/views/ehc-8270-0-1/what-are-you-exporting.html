@@ -24,7 +24,7 @@
 		<div>
 			<h1 id="questionPageHeading" class="govuk-heading-xl">What are you exporting?</h1>
 
-			<form action="/protected/form/8270EHC/application/1651965957431/choose-commodity" method="POST" enctype="">
+			<form method="POST">
 				<input type="hidden" name="crumb_csrf_token" value="H79eRbwD_6pM6nw6jLLqCXhqdVtonYsS9MMXXG97YKo">
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
@@ -196,15 +196,13 @@
 
 				</div>
 
-				<div class="govuk-!-margin-left-0 govuk-grid-column-one-quarter govuk-!-padding-0">
-					<input class="govuk-button" type="submit" name="saveAndContinue" value="Save and continue" id="Button-SaveAndContinue" data-qa-id="Button-SaveAndContinue">
-				</div>
+				{{govukButton({
+					text: "Save and continue"
+				})}}
 
-				<div class="govuk-grid-row">
-					<div class="govuk-grid-column-full govuk-body">
-						<input class="link-button" type="submit" value="Save and continue later" name="saveAndResumeLater" data-qa-id="Button-SaveAndResumeLater" id="Button-SaveAndResumeLater">
-					</div>
-				</div>
+				<p>
+					<a href="task-list">Save and return to application</a>
+				</p>
 
 			</form>
 

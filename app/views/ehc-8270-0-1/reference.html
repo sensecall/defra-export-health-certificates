@@ -26,7 +26,7 @@
     <span id="questionPageSubtitle" class="govuk-caption-xl"></span>
     <div id="questionPageHint" class="govuk-body govuk-!-margin-bottom-3 govuk-hint">Enter a reference up to 20 letters or numbers long, such as an invoice number or consignee</div>
 
-    <form action="/protected/form/8270EHC/application/1651965957431/page/1" method="POST" enctype="application/x-www-form-urlencoded">
+    <form method="post">
       <input type="hidden" name="crumb_csrf_token" value="Jg1OK7isyiu8Ce6ueA4wUP3Gn_MRl31zwV60KkKkjmv">
       <input type="hidden" name="certificate" value="">
       <input type="hidden" name="formPageId" value="">
@@ -50,16 +50,18 @@
 
       <input type="hidden" id="numQuestionsOnPage" name="numQuestionsOnPage" value="1">
       <div class="govuk-grid-row margin-top-30"></div>
-      <div class="govuk-grid-column-one-half govuk-!-margin-left-0 govuk-!-padding-0">
-        <input class="govuk-button margin-top-30" type="submit" name="saveAndContinue" aria-label="save and continue" value="Save and continue" id="Button-SaveAndContinue" data-qa-id="Button-SaveAndContinue">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full govuk-body">
-            <input class="link-button" type="submit" value="Save and continue later" aria-label="Save and continue later" name="saveAndResumeLater" data-qa-id="Button-SaveAndResumeLater" id="Button-SaveAndResumeLater">
-          </div>
+
+      {{govukButton({
+        text: "Save and continue"
+      })}}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full govuk-body">
+          <a href="task-list">Save and return to application</a>
         </div>
-
-
       </div>
+
+
     </form>
   </div>
 </div>

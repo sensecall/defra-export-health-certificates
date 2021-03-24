@@ -50,6 +50,17 @@ router.post('/block', (req, res, next) => {
 	res.redirect('task-list')
 })
 
+router.post('/what-are-you-exporting', (req, res, next) => {
+	res.redirect('reference')
+})
+
+router.post('/reference', (req, res, next) => {
+	res.redirect('destination')
+})
+
+router.post('/destination', (req, res, next) => {
+	res.redirect('about-your-certifier')
+})
 
 
 module.exports = router

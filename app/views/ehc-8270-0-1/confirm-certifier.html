@@ -47,15 +47,12 @@
             </p>
           </fieldset>
         </div>
-          {{govukButton({
-            href: "task-list",
-            text: "Confirm and continue"
-          })}}
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full govuk-body">
-            <a href="/protected/dashboard" class="govuk-link" value="Save and continue later" name="saveAndResumeLater" id="Button-SaveAndResumeLater">Save and continue later</a>
-          </div>
-        </div>
+
+        {{govukButton({
+          href: "task-list",
+          text: "Confirm and continue",
+          classes: "govuk-!-margin-top-6"
+        })}}
 
       </div>
     </form>
