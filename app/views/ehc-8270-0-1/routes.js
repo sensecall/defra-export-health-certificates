@@ -46,8 +46,16 @@ router.post('/choose-certificate', (req, res, next) => {
 	res.redirect('block')
 })
 
+router.post('/clone', (req, res, next) => {
+	res.redirect('reuse-reference')
+})
+
+router.post('/reuse-reference', (req, res, next) => {
+	res.redirect('review-your-answers')
+})
+
 router.post('/block', (req, res, next) => {
-	res.redirect('task-list')
+	res.redirect('certificate-number')
 })
 
 router.post('/what-are-you-exporting', (req, res, next) => {
